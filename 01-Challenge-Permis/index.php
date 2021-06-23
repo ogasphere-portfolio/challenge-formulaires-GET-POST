@@ -42,9 +42,7 @@
                 on affiche le nom et le prénom de la personne qui souhaite s'inscrire. -->
                 <?php
                     if (!empty($_GET)) {
-                       
                         echo $_GET['firstname'] .' '.  $_GET['lastname'];
-                    
                     }else {
                        echo ('-');
                     }
@@ -68,7 +66,7 @@
                        
                         if ($_GET['age'] <16) {
 
-                           echo "Trop jeune pour s'inscrire";
+                            echo "Trop jeune pour s'inscrire";
                          
                         } else if ($_GET['age'] >=16 && $_GET['age'] <=18) {
                         
