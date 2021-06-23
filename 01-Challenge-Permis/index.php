@@ -16,7 +16,7 @@
                 <label for="firstname">Prénom</label>
                 <input type="text" name="firstname" id="firstname">
                 <label for="age">Âge</label>
-                <input type="number" name="age" id="age">
+                <input type="number" name="age" id="age" required>
                 <!--
                     Pour générer un bouton de soumission de formulaire,
                     depuis HTML5, on peut utiliser la balise sémantique <button>
@@ -28,21 +28,32 @@
                     la balise <button> est placée dans une balise <form>
                     https://developer.mozilla.org/en-US/docs/Web/HTML/Element/button#attr-type
                 -->
-                <button>Je m'inscris</button>
+                <button name="button">Je m'inscris</button>
+                
             </form>
         </main>
         <aside>
             <h1>Résumé de l'inscription</h1>
             <h2>Inscription de </h2>
             <div class="answer">
-                -
+               
                 <!-- Notre code ici : -->
                 <!-- Si on reçoit une réponse du formulaire (donc si notre variable $_GET est remplie), alors
                 on affiche le nom et le prénom de la personne qui souhaite s'inscrire. -->
+                <?php
+                    if (!empty($_GET)) {
+                       
+                        echo $_GET['firstname'] .' '.  $_GET['lastname'];
+                    
+                    }else {
+                       echo ('-');
+                    }
+                ?>
+
             </div>
             <h2>Autorisation </h2>
             <div class="answer">
-                -
+                
                 <!-- Notre code ici : -->
                 <!-- Si on reçoit une réponse du formulaire (donc si notre variable $_GET est remplie), alors : 
                     - On récupère l'âge de la personne
@@ -51,6 +62,24 @@
                         - S'il l'âge est situé entre 16 et 18 ans, on affiche "Inscription possible en conduite accompagnée"
                         - Sinon, afficher "Inscription possible"
                 -->
+
+                <?php
+                    if (!empty($_GET)) {
+                       
+                        if ($_GET['age'] <16) {
+
+                           echo "Trop jeune pour s'inscrire";
+                         
+                        } else if ($_GET['age'] >=16 && $_GET['age'] <=18) {
+                        
+                            echo "Inscription possible en conduite accompagnée";
+                        }else {
+                            echo "Inscription possible";
+                        }
+                    }else {
+                        echo ('-');
+                    }
+                ?>
             </div>
         </aside>
     </body>
