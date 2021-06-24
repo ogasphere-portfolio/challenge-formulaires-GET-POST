@@ -65,8 +65,8 @@
                     if (!empty($_GET)) {
                        
                         if ($_GET['age'] <16) {
-
-                            echo "Trop jeune pour s'inscrire";
+                            $age_Inscription=16-$_GET['age'];
+                            echo 'Vous pourrez vous inscrire dans '.$age_Inscription.' ans';
                          
                         } else if ($_GET['age'] >=16 && $_GET['age'] <=18) {
                         
