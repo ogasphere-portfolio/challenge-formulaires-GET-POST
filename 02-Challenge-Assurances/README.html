@@ -1,0 +1,54 @@
+<h1 id="challenge--php-variables-conditions-tableaux">Challenge : PHP, variables, conditions, tableaux</h1>
+<h2 id="objectif">Objectif</h2>
+<p>Revoir les bases de la syntaxe PHP, écrire vos premiers scripts, utiliser un formulaire, savoir utiliser les conditions pour éxécuter un traitement différent selon des valeurs fournies.</p>
+<h2 id="problématique">Problématique</h2>
+<p>Une compagnie d'assurances veut aussi vous mettre au travail ! Il s'agit de calculer le niveau de contrat pour ses prospects.</p>
+<p>La compagnie d'assurance automobile propose à ses clients <strong>quatre paliers tarifaires</strong> du plus au moins onéreux :</p>
+<ul>
+<li>Palier 0 : Refus d'assurer</li>
+<li>Palier 1 : Rouge</li>
+<li>Palier 2 : Orange</li>
+<li>Palier 3 : Vert</li>
+<li>Palier 4 : Bleu</li>
+</ul>
+<p>On recense les informations suivantes sur le conducteur :</p>
+<ul>
+<li>Son <code>âge</code> (en nb d'années)</li>
+<li>L'<code>ancienneté</code> de son permis (en nb d'années)</li>
+<li>Le <code>nombre d'accidents</code> de sa responsabilité</li>
+<li>Son <code>ancienneté chez l'assureur</code> (en nb d'années)</li>
+</ul>
+<p>Le <code>palier</code> dépend de la situation du conducteur et des <strong>conditions</strong> suivantes :</p>
+<ul>
+<li>Par défaut, tout le monde entre au palier 1 (tarif Rouge)</li>
+<li>Le nombre d'accidents réduit d'autant le nombre de paliers</li>
+<li>Un permis de plus de 2 ans augmente le palier d'un niveau</li>
+<li>Un âge de plus de 25 ans augmente le palier d'un niveau</li>
+<li>Une ancienneté de plus de 5 ans augmente le palier d'un niveau, si le conducteur n'est pas déjà refusé</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<ol>
+<li>Créer un formulaire HTML demandant les informations nécessaires au calcul</li>
+<li>Après soumission du formulaire, créer les variables qui vont contenir les informations du client</li>
+<li>Écrire le script qui permet de déterminer à quel palier peut prétendre un client, selon ses informations (et donc à quelle couleur de tarif)</li>
+<li>Afficher le résultat, par ex. "Votre client a droit au tarif Vert"</li>
+</ol>
+<h2 id="bonus">Bonus</h2>
+<ol>
+<li>afficher le résultat de trois manières différentes : via <code>if</code> &amp; <code>elseif</code> ou bien <code>switch</code> ou bien <code>array()</code><ul>
+<li>Voir <a href="http://php.net/manual/en/control-structures.switch.php">Switch sur PHP.net</a> et voir la fiche récap' "Syntaxe" pour <code>array()</code></li></ul></li>
+<li>fioritures graphiques<ul>
+<li>Font : <code>Roboto 400 et 900</code></li>
+<li>Image fournie dans le repo pour illustrer</li>
+<li>Couleurs pour les titres : <code>#006a53</code></li>
+<li>Une couleur par palier, à rendre dynamique via CSS : <code>grey</code>, <code>red</code>, <code>orange</code>, <code>green</code>, <code>blue</code>.</li></ul></li>
+</ol>
+<h3 id="aperçu-possible">Aperçu possible</h3>
+<p><img src="docs/capture.png" alt="IMG" /></p>
+<h2 id="conseils">Conseils</h2>
+<ul>
+<li>Vous pouvez <em>revoir les scripts écrits en cours</em> pour vous remettre les choses en mémoire.</li>
+<li>Si vous ne voyez pas comment faire, <em>utilisez papier et crayon ou écrivez dans les commentaires de votre script</em>,  <br />
+et essayez de décomposer ce que vous comprenez.  <br />
+Ecrivez des commentaires descriptifs, <em>essayez d'exécuter les étapes une par une</em>. Vous aurez sûrement des idées.</li>
+</ul>
